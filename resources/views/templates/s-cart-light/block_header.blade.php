@@ -94,26 +94,6 @@
                     </li>
                     @endif
                     @endif
-
-                    @if (sc_config('link_currency', null, 1))
-                    @if (count($sc_currencies)>1)
-                    <li class="rd-nav-item">
-                        <a class="rd-nav-link" href="#">
-                            {{ sc_currency_info()['name'] }} <i class="fas fa-caret-down"></i>
-                        </a>
-                        <ul class="rd-menu rd-navbar-dropdown">
-                            @foreach ($sc_currencies as $key => $currency)
-                            <li class="rd-dropdown-item" {{ ($currency->code ==  sc_currency_info()['code']) ? 'disabled': '' }}>
-                                <a class="rd-dropdown-link" href="{{ sc_route('currency', ['code' => $currency->code]) }}">
-                                    {{ $currency->name }}
-                                </a>
-                            </li>
-                            @endforeach
-                        </ul>
-                    </li>
-                    @endif
-                    @endif
-
                   </ul>
                 </div>
 

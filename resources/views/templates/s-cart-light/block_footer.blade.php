@@ -7,7 +7,6 @@
                 <a href="{{ sc_route('home') }}">
                     <img class="logo-footer" src="{{  sc_file(sc_store('logo', ($storeId ?? null))) }}" alt="{{ sc_store('title', ($storeId ?? null)) }}">
                 </a>
-                <p>{{ sc_store('title', ($storeId ?? null)) }}</p>
                 <p> {!! sc_store('time_active', ($storeId ?? null))  !!}</p>
                 <div class="footer-classic-social">
                   <div class="group-lg group-middle">
@@ -81,18 +80,8 @@
           <div class="container">
             <div class="row row-10 align-items-center justify-content-sm-between">
               <div class="col-md-auto">
-                <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>{{ sc_store('title', ($storeId ?? null)) }}</span><span>.&nbsp; All rights reserved</span></p>
+                <p class="rights">Copyright © 2022. All rights reserved</p>
               </div>
-              @if (sc_config('fanpage_url'))
-              <div class="col-md-auto order-md-1"> <a target="_blank"
-                href="{{ sc_config('fanpage_url') }}">Fanpage FB</a>
-              </div>
-              @endif
-              @if (!sc_config('hidden_copyright_footer'))
-              <div class="col-md-auto">
-                    Power by <a href="{{ config('s-cart.homepage') }}">{{ config('s-cart.name') }} {{ config('s-cart.sub-version') }}</a>
-              </div>
-              @endif
             </div>
           </div>
         </div>
